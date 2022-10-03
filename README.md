@@ -10,7 +10,32 @@ Just Do It
 
 이승훈, 박영태, 이유진, 배규남, 정윤아, 조경찬, 이윤승
 
-# 2. 서비스 소개
+# 2. 기술스택 & 라이브러리
+<ul>
+  <li>Front-END
+    <ul>
+      <li>React.js</li>
+      <li>SCSS</li>
+    </ul>
+  </li>
+  <li>BACK-END
+    <ul>
+      <li>Node.js</li>
+      <li>Express</li>
+      <li>JSON WEB TOKEN</li>
+      <li>Bcrypt</li>
+      <li>Mysql</li>
+      <li>AWS</li>
+    </ul>
+  </li>
+  <li>공통
+    <ul>
+      <li>RestFul API</li>
+    </ul>
+  </li>
+</ul>
+
+# 3. 서비스 소개
 
 ---
 
@@ -22,7 +47,7 @@ Just Do It
 
 </aside>
 
-# 3. 필수 구현 사항
+# 4. 필수 구현 사항
 
 ---
 
@@ -86,7 +111,7 @@ Just Do It
 
 </aside>
 
-# 4. 추가 구현 사항
+# 5. 추가 구현 사항
 
 ---
 
@@ -100,7 +125,7 @@ Just Do It
 
 </aside>
 
-# 5. 변경 사항
+# 6. 변경 사항
 
 ---
 
@@ -112,7 +137,7 @@ Just Do It
 </aside>
 
 
-# 6. 프로젝트 진행 간 시 주의사항
+# 7. 프로젝트 진행 간 시 주의사항
 
 존중과 배려와 즐거움.
 
@@ -128,7 +153,7 @@ Just Do It
 
 외부 라이브러리는 사용하지 않는다.(직접 구현)
 
-# 7. Reference 
+# 8. Reference 
 
 이 프로젝트는 나이키 사이트를 참조하여 학습목적으로 만들었습니다.
 
