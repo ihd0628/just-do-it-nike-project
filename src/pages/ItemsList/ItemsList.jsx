@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import FilterBar from './components/FilterBar/FilterBar';
+import FilterBar from './components/FilterBar/FilterBar.jsx';
 import ListContent from './components/ListContent/ListContent';
 import ListHeader from './components/listHeader/ListHeader';
 import standardObject from './components/FilterBar/constantData/standardObject';
