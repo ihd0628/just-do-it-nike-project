@@ -1,4 +1,8 @@
-const standardObject = {
+interface StandardObject {
+  [key: string]: string;
+}
+
+const standardObject: StandardObject = {
   신상품순: 'releaseDate desc',
   판매순: 'salescount desc',
   '리뷰 많은 순': 'reviewcount desc',

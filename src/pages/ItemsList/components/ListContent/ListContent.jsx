@@ -11,7 +11,6 @@ function ListContent({
   setOffset,
   setLimit,
   itemListCount,
-  nextHider,
 }) {
   return (
     <div
