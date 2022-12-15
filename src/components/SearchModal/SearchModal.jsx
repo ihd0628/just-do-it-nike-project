@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { SEARCH_CONFIG } from '../../config';
+import { IP_CONFIG, SEARCH_CONFIG } from '../../config';
 // import { SEARCH_MODAL_DATA } from './SEARCH_MODAL_DATA';
 import './SearchModal.scss';
 import { useEffect } from 'react';
@@ -13,7 +13,7 @@ function SearchModal({ closeTargetModal }) {
   const [searchItemView, setSearchItemView] = useState([]);
 
   useEffect(() => {
-    fetch('http://192.168.243.200:8000/products?offset=0&limit=19')
+    fetch(`${IP_CONFIG}/products?offset=0&limit=19`)
       .then(response => response.json())
       .then(result => setSearchItemView(result.list));
   }, []);

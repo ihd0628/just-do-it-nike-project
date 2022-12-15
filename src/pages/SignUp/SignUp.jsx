@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { SIGN_UP_CONFIG } from '../../config';
+import { IP_CONFIG, SIGN_UP_CONFIG } from '../../config';
 import { SIGN_UP_INPUT_DATA } from './SIGN_UP_DATA';
 import './SignUp.scss';
 
@@ -87,7 +87,7 @@ function SignUp() {
     try {
       validateSignUp(value);
 
-      fetch('http://192.168.243.200:8000/users/signup', {
+      fetch(`${IP_CONFIG}/users/signup`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json;charset=utf-8',

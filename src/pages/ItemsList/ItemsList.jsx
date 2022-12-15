@@ -6,19 +6,20 @@ import ListHeader from './components/listHeader/ListHeader';
 import standardObject from './components/FilterBar/constantData/standardObject';
 
 import './itemList.scss';
+import { IP_CONFIG } from '../../config.js';
 
 function ItemList() {
-  const [products, setProducts] = useState<object[]>([]);
-  const [sortStandard, setSortStandard] = useState<string>('신상품순');
-  const [filterHider, setFilterHider] = useState<boolean>(true);
-  const [checkList, setCheckList] = useState<CheckList>({});
-  const [selectedColor, setSelectedColor] = useState<string[]>([]);
-  const [selectedSize, setSelectedSize] = useState<string[]>([]);
-  const [offset, setOffset] = useState<number>(0);
-  const [limit, setLimit] = useState<number>(5);
+  const [products, setProducts] = useState([]);
+  const [sortStandard, setSortStandard] = useState('신상품순');
+  const [filterHider, setFilterHider] = useState(true);
+  const [checkList, setCheckList] = useState({});
+  const [selectedColor, setSelectedColor] = useState([]);
+  const [selectedSize, setSelectedSize] = useState([]);
+  const [offset, setOffset] = useState(0);
+  const [limit, setLimit] = useState(5);
   const [, setSearchParams] = useSearchParams();
 
-  const itemListCount = useRef<HTMLDivElement>(null);
+  const itemListCount = useRef(null);
 
   useEffect(() => {
     const sortStandardForSubmit = standardObject[sortStandard];
@@ -36,7 +37,7 @@ function ItemList() {
       );
     }
     setSearchParams(urlForSubmit);
-    fetch('http://192.168.243.200:8000/products?' + urlForSubmit)
+    fetch(`${IP_CONFIG}/products?` + urlForSubmit)
       .then(response => response.json())
       .then(result => {
         const { current } = itemListCount;

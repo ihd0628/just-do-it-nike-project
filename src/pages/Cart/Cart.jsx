@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import CartIsNull from './Commponent/CartIsNull';
 import CartIsNotNull from './Commponent/CartIsNotNull';
 import './Cart.scss';
+import { IP_CONFIG } from '../../config';
 
 function Cart() {
   const [cartItems, setCartItems] = useState([]);
@@ -9,7 +10,7 @@ function Cart() {
 
   //통신용
   useEffect(() => {
-    fetch('http://192.168.243.200:8000/carts', {
+    fetch(`${IP_CONFIG}/carts`, {
       mehtod: 'GET',
       headers: {
         authorization: localStorage.getItem('token'),

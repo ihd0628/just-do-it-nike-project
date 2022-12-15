@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { IP_CONFIG } from '../../../../config';
 
 import './Modal.scss';
 import ModalContentBox from './ModalContentBox/ModalContentBox';
@@ -15,7 +16,7 @@ function Modal({
   const accessToken = localStorage.getItem('token');
   const [result, setResult] = useState([]);
   useEffect(() => {
-    fetch(`http://192.168.243.200:8000/carts`, {
+    fetch(`${IP_CONFIG}/carts`, {
       method: 'GET',
       headers: {
         authorization: accessToken,

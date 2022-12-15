@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { IP_CONFIG } from '../../../config';
 // import { WISH_DATA } from '../../../config';
 
 function WishItem({ productId, thumbnail, name, price, userId }) {
@@ -11,7 +12,7 @@ function WishItem({ productId, thumbnail, name, price, userId }) {
   const handleDeleteCheck = async event => {
     try {
       if (window.confirm('삭제 하시겠습니까?')) {
-        await fetch(`http://192.168.243.200:8000/wishlist/${productId}`, {
+        await fetch(`${IP_CONFIG}/wishlist/${productId}`, {
           method: 'DELETE',
           headers: {
             authorization: token,

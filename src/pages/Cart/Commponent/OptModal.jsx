@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { IP_CONFIG } from '../../../config';
 import './OptModal.scss';
 
 function OptModal({
@@ -27,7 +28,7 @@ function OptModal({
       }
     });
   const changeCartItemInfo = () => {
-    fetch(`http://192.168.243.200:8000/carts/${cartId}`, {
+    fetch(`${IP_CONFIG}/carts/${cartId}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json;charset=utf-8',
